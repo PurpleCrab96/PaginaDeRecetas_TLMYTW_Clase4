@@ -1,0 +1,95 @@
+body {
+    background-color: #1E1E1E;
+    /* Esta propiedad establece el color de fondo del cuerpo del documento. */
+}
+
+.layout {
+    display: grid;
+    /* Esta propiedad establece el diseño de la cuadrícula. */
+    grid-template-columns: 15% 68% 15%;
+    /* Esta propiedad establece el ancho de las columnas de la cuadrícula. */
+    gap: 1%;
+    /* Esta propiedad establece el espacio entre las columnas de la cuadrícula. */
+}
+
+.header {
+    background: #69b4ff;
+    /* Esta propiedad establece el color de fondo del encabezado. */
+    grid-column: span 3;
+    /* Esta propiedad hace que el encabezado ocupe las tres columnas de la cuadrícula. */
+    text-align: center;
+    /* Esta propiedad alinea el texto del encabezado al centro. */
+}
+
+.menuIzquierdo {
+    background: #69b4ff;
+    /* Esta propiedad establece el color de fondo del menú izquierdo. */
+    grid-row: span 3;
+    /* Esta propiedad hace que el menú izquierdo ocupe las tres filas de la cuadrícula. */
+    padding: 10px;
+    /* Esta propiedad establece el relleno del menú izquierdo. */
+}
+
+.cuerpoReceta {
+    background: #e0ffff;
+    /* Esta propiedad establece el color de fondo del cuerpo de la receta. */
+    text-align: justify;
+    /* Esta propiedad alinea el texto del cuerpo de la receta a la izquierda. */
+    padding: 2%;
+    /* Esta propiedad establece el relleno del cuerpo de la receta. */
+}
+
+.menuDerecho {
+    background: #69b4ff;
+    /* Esta propiedad establece el color de fondo del menú derecho. */
+    text-align: justify;
+    /* Esta propiedad alinea el texto del menú derecho a la izquierda. */
+    padding: 10px;
+    /* Esta propiedad establece el relleno del menú derecho. */
+}
+
+.footer {
+    background: #69b4ff;
+    /* Esta propiedad establece el color de fondo del pie de página. */
+    grid-column: span 3;
+    /* Esta propiedad hace que el pie de página ocupe las tres columnas de la cuadrícula. */
+    text-align: right;
+    /* Esta propiedad alinea el texto del pie de página a la derecha. */
+}
+
+.menuDeslizable {
+    display: flex;
+    /* Esta propiedad establece el diseño de flexbox para el menú deslizante. */
+    width: 95%;
+    /* Esta propiedad establece el ancho del menú deslizante. */
+    height: 430px;
+    /* Esta propiedad establece la altura del menú deslizante. */
+    padding: 30px;
+    /* Esta propiedad establece el relleno del menú deslizante. */
+    justify-content: center;
+    /* Esta propiedad centra el contenido del menú deslizante. */
+}
+
+.menuDeslizable img {
+    width: 0px;
+    /* Esta propiedad establece el ancho inicial de la imagen en 0 píxeles. */
+    flex-grow: 1;
+    /* Esta propiedad hace que la imagen ocupe todo el espacio disponible en el flexbox. */
+    object-fit: cover;
+    /* Esta propiedad hace que la imagen se ajuste al tamaño del flexbox. */
+    opacity: 0.8;
+    /* Esta propiedad establece la opacidad inicial de la imagen en 80%. */
+    transition: 0.5s ease;
+    /* Esta propiedad establece la transición de la imagen al pasar el mouse sobre ella. */
+}
+
+.menuDeslizable img:hover {
+    cursor: grabbing;
+    /* Esta propiedad establece el cursor en "agarrando" cuando el mouse pasa sobre la imagen. */
+    width: 250px;
+    /* Esta propiedad establece el ancho de la imagen al pasar el mouse sobre ella. */
+    opacity: 1;
+    /* Esta propiedad establece la opacidad de la imagen al pasar el mouse sobre ella. */
+    filter: contrast(120%);
+    /* Esta propiedad aumenta el contraste de la imagen al pasar el mouse sobre ella. */
+}
